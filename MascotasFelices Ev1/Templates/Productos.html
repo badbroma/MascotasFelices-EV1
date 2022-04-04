@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos y Servicios</title>
+    	<!--JQUERY-->
+	<script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script 
+		src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="../css/Tables.css"
+        th:href="@{/css/user-form.css}">
+
+</head>
+<body>
+<div class="container"><!--LA NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-fixed-top" style="background-color:#f8f9fad4 !important;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../Index.html"><img src="../img/logo.png" alt="logo" width="100" height="100"></a>
+        <a class="navbar-brand" href="Tables.html">Mascotas Felices</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">	
+            <ul class="navbar-nav mx-auto">
+            <li class="nav-item active">
+                <a class="nav-link active" href="Tables.html">Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Contacto.html">Contacto</a>
+            </li>
+            </ul>
+            <span class="navbar-text">
+                <a href="../Index.html" class="btn btn-warning">Cerrar sesión</a>
+            </span>
+      </div>
+    </div>
+  </nav>
+</div>
+
+  
+<div class="container mt-5">
+<div class="row row-cols-2 row-cols-lg-3 g-3 g-lg-3">
+    <!--col-12 col-sm-6 col-md-4 col-lg-3 mt-2-->
+      <div class="col col-lg-3 pr-0">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title text-center"><img id="img_obs" img class="img-fluid" src="https://mlstaticquic-a.akamaihd.net/bano-sanitario-para-gato-colores-50x37x39-cm-lxw-h-envio-D_NQ_NP_914839-MLU31245617442_062019-F.jpg"></h5>
+            <p class="card-text"><label id="desayuno">Baño Sanitario</label><br>Baño sanitario para mascotas set completo<br>Precio: $50.000</p>
+            <p class="collapse" id="collapseExample8">Ver mas Respecto a este Articulo</p>
+            <p class="card-text text-right">
+            <a data-toggle="modal" data-target="#exampleModal3"  href="#" class="btn btn-primary">Añadir al Carrito</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 pr-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center"><img id="img_obs" img class="img-fluid" src="https://clickeastore.cl/wp-content/uploads/2021/04/cama-mascota.jpg8_.jpg"></h5>
+            <p class="card-text"><label id="desayuno">Cama Mascotas</label><br>Cama para mascotas con calentador incluido<br>Incluye: $50.000</p>
+            <p class="collapse" id="collapseExample8">Ver mas Respecto a este Articulo</p>
+            <p class="card-text text-right">
+            <a data-toggle="modal" data-target="#exampleModal3"  href="#" class="btn btn-primary">Añadir al Carrito</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 pr-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center"><img id="img_obs" img class="img-fluid" src="https://img.milanuncios.com/fg/2415/82/241582948_7.jpg?VersionId=GsE4sKxYLeylyBat3TAMzsy6YQf1KB7g"></h5>
+            <p class="card-text"><label id="desayuno">Comida para loro</label><br>Bolsa de comida para loros psittacus 450g<br>Incluye: $50.000</p>
+            <p class="collapse" id="collapseExample8">Ver mas Respecto a este Articulo</p>
+            <p class="card-text text-right">
+            <a data-toggle="modal" data-target="#exampleModal3"  href="#" class="btn btn-primary">Añadir al Carrito</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 pr-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center"><img id="img_obs" img class="img-fluid" src="https://todobricolaje.net/wp-content/uploads/2020/04/correa-para-perros-grandes.jpg"></h5>
+            <p class="card-text"><label id="desayuno">Correa para Perro</label><br>Correa reforzada para mascota con arnés<br>Incluye: $50.000</p>
+            <p class="collapse" id="collapseExample8">Ver mas Respecto a este Articulo</p>
+            <p class="card-text text-right">
+            <a data-toggle="modal" data-target="#exampleModal3"  href="#" class="btn btn-primary">Añadir al Carrito</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 pr-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center"><img id="img_obs" img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0185/9786/products/pww00-13704_e1_0bce65ea-135f-4b84-aab0-ea607f7dc942_1080x1080.jpg?v=1569122063"></h5>
+            <p class="card-text"><label id="desayuno">Fuente Para el agua</label><br>Fuente para beber agua apta para mascotas<br>Incluye: $50.000</p>
+            <p class="collapse" id="collapseExample8">Ver mas Respecto a este Articulo</p>
+            <p class="card-text text-right">
+            <a data-toggle="modal" data-target="#exampleModal3"  href="#" class="btn btn-primary">Añadir al Carrito</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 pr-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center"><img id="img_obs" img class="img-fluid" src="https://images1.tiendanimal.es/g/hueso-antisarro-snack-para-perros-mta-9337.jpg"></h5>
+            <p class="card-text"><label id="desayuno">Hueso para perro</label><br>Huesos de juguete para perros set completo<br>Incluye: $50.000</p>
+            <p class="collapse" id="collapseExample8">Ver mas Respecto a este Articulo</p>
+            <p class="card-text text-right">
+            <a data-toggle="modal" data-target="#exampleModal3"  href="#" class="btn btn-primary">Añadir al Carrito</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 pr-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center"><img id="img_obs" img class="img-fluid" src="https://animalshop.com.uy/wp-content/uploads/2020/05/7.jpg"></h5>
+            <p class="card-text"><label id="desayuno">Rascador para animales</label><br>Rascador para mascotas set 3 piezas + bolitas<br>Incluye: $50.000</p>
+            <p class="collapse" id="collapseExample8">Ver mas Respecto a este Articulo</p>
+            <p class="card-text text-right">
+            <a data-toggle="modal" data-target="#exampleModal3"  href="#" class="btn btn-primary">Añadir al Carrito</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 pr-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center"><img id="img_obs" img class="img-fluid" src="http://ae01.alicdn.com/kf/Hcbbe4e922d5b4e369b79ea5de1c168cfu.jpg"></h5>
+            <p class="card-text"><label id="desayuno">Zapatos para perritos</label><br>Zapatos para perritos variedad de tallas<br>Incluye: $50.000</p>
+            <p class="collapse" id="collapseExample8">Ver mas Respecto a este Articulo</p>
+            <p class="card-text text-right">
+            <a data-toggle="modal" data-target="#exampleModal3"  href="#" class="btn btn-primary">Añadir al Carrito</a>
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</body>
+</html>

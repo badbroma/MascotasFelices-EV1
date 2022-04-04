@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Registro de clientes</title>
+	
+	<!--JQUERY-->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script 
+		src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script 
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	
+	<!-- Los iconos tipo Solid de Fontawesome-->
+	<link rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+	<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	
+	<!-- Nuestro css-->
+	<link rel="stylesheet" type="text/css" href="../css/Tables.css"
+		th:href="@{/css/user-form.css}">
+	<!-- DATA TABLE -->
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">	
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+	<script type="text/javascript">
+	    $(document).ready(function() {
+	        //el id de la tabla sea igual al texto despues del simbolo #
+	        $('#userList').DataTable();
+	    } );
+	</script>
+</head>
+<body>
+	<div class="container"><!--LA NAVBAR-->
+		<nav class="navbar navbar-expand-lg navbar-fixed-top" style="background-color:#f8f9fad4 !important;">
+		  <div class="container-fluid">
+			  <div class="bienvenida">
+				<a class="navbar-brand" href="../Index.html"><img src="../img/logo.png" alt="logo" width="100" height="100"></a>
+				<a class="navbar-brand" href="Tables.html">Mascotas Felices</a>
+			</div>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">	
+				  <ul class="navbar-nav mx-auto">
+				  <li class="nav-item active">
+					  <a class="nav-link active" href="#">Inicio<span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item">
+					  <a class="nav-link" href="Productos.html">Productos</a>
+				  </li>
+				  <li class="nav-item">
+					  <a class="nav-link" href="Contacto.html">Contacto</a>
+				  </li>
+				  </ul>
+				  <span class="navbar-text">
+					  <a href="../Index.html" class="btn btn-warning">Cerrar sesión</a>
+				  </span>
+			</div>
+		  </div>
+		</nav>
+	  </div>
+    </div>
+	</div>
+	<div class="container">
+	<div class="mx-auto col-sm-8 main-section" id="myTab" role="tablist"><!---TabBar-->
+		<ul class="nav nav-tabs justify-content-end">
+			<li class="nav-item">
+			<a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">Tabla de Registro</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="true">Registrar Mascota</a>				   	
+			</li>
+		</ul>
+		<div class="tab-content" id="myTabContent">
+			<div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+				<div class="card">
+					<div class="card-header">
+						<h4>Registro de mascotas</h4>
+					</div>
+					<div class="card-body">
+						<div class="table-responsive-lg">
+							<table id="userList" class="table table-bordered table-hover table-striped">
+								<thead class="thead-light">
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Nombre</th>
+									<th scope="col">Tipo de Mascota</th>
+									<th scope="col">Fecha Ingreso</th>
+									<th scope="col">Observaciones</th>
+									<th></th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Espumita</td>
+										<td>Perro</td>
+										<td>13/02/2022</td>
+										<td>Vacunas al dia pero le hace falta un corte de pelo</td>
+										<td>
+											<a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Señor Bigotes</td>
+										<td>Gato</td>
+										<td>23/03/2022</td>
+										<td>Falta su vacuna felina y cortarle las uñas</td>
+										<td>
+											<a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Piroco</td>
+										<td>Loro</td>
+										<td>21/02/2022</td>
+										<td>Tiene horarios estrictos para comer y para dormir los cuales ya fueron entregados</td>
+										<td>
+											<a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">4</th>
+										<td>Mike</td>
+										<td>Hurón</td>
+										<td>14/12/2021</td>
+										<td>Tiene herida que se debe tratar en pata inferior izq y necesita su ultima vacuna</td>
+										<td>
+											<a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">5</th>
+										<td>Rico</td>
+										<td>Mono</td>
+										<td>03/02/2022</td>
+										<td>Necesita corte de pelo y debe estar aislado por tener carácter agresivo</td>
+										<td>
+											<a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-tab"><!--Formulario de la Tabla-->
+				<div class="card">
+					<div class="card-header">
+						<h4>Registro de mascotas</h4>
+					</div>
+					<div class="card-body">
+						<form class="form" role="form" autocomplete="off">
+							<div class="form-group row">
+								<label class="col-lg-3 col-form-label form-control-label">Nombre</label>
+								<div class="col-lg-9">
+									<input class="form-control" type="text" >
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-lg-3 col-form-label form-control-label">Tipo de Mascota</label>
+								<div class="col-lg-9">
+									<input class="form-control" type="email">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-lg-3 col-form-label form-control-label">Fecha Ingreso</label>
+								<div class="col-lg-9">
+									<input class="form-control" type="date">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-lg-3 col-form-label form-control-label">Observaciones</label>
+								<div class="col-lg-9">
+									<input class="form-control" type="text">
+								</div>
+							</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-lg-12 text-center">
+									<a href="Tables.html" class="btn btn-primary">Cancelar</a>
+									<a href="Tables.html" class="btn btn-primary">Registrar Mascota</a>
+									
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
